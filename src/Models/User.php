@@ -292,6 +292,18 @@ class User extends Entry implements Authenticatable
         return $this->getFirstAttribute($this->schema->homePhone());
     }
 
+	/**
+     * The user's main mobile phone number.
+     *
+     * @link https://learn.microsoft.com/en-us/windows/win32/adschema/a-mobile
+     *
+     * @return string|null
+     */
+    public function getMobilePhone()
+    {
+        return $this->getFirstAttribute($this->schema->mobile());
+    }
+
     /**
      * Returns the users principal name.
      *
